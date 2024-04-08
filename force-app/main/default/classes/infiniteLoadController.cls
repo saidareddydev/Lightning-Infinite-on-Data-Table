@@ -3,7 +3,7 @@ public with sharing class infiniteLoadController {
     @AuraEnabled(cacheable=true)
         public Static List<Account> loadDataById(){
 
-            return [Select Id,Name,Industry,Rating.Active__C From Account ORDER By Name,Id Limit 500];
+            return [Select Id,Name,Industry,Rating,Active__C From Account ORDER By Name,Id Limit 500];
 
         }
 
